@@ -1,0 +1,17 @@
+
+body {
+
+    padding-top: 12rem;
+
+}
+
+.submit-group {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.sign {
+    background-color: lightgray;
+    color: black;
+}

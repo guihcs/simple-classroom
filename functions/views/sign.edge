@@ -1,0 +1,35 @@
+@layout('master')
+
+@section('head')
+<link rel="stylesheet" type="text/css" href="sign.css">
+<title> Sign </title>
+@endsection
+
+@section('body')
+
+<div class="container">
+    <h1 class="title">Sign</h1>
+    <div class="form-group">
+        <label for="nameField">Full Name</label>
+        <input id="nameField" class="form-input" type="text" placeholder="Name">
+        <label for="emailField">Email</label>
+        <input id="emailField" class="form-input" type="email" placeholder="Email">
+        <label for="passwordField">Password</label>
+        <input id="passwordField"class="form-input"  type="password" placeholder="Password">
+        <label for="confirmField">Confirm Password</label>
+        <input id="confirmField" class="form-input" type="password" placeholder="Confirm Password">
+    </div>
+
+    <button class="button" onclick="sign()"> SIGN </button>
+</div>
+
+
+
+
+
+@endsection
+
+
+@section('script')
+    <script src="sign.js"></script>
+@endsection

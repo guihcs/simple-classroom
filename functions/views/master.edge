@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="master.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    @!section('head')
+</head>
+<body>
+    @!section('body')
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/7.5.0/firebase-auth.js"></script>
+    <script src="/__/firebase/7.5.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        let firebaseConfig = {
+            apiKey: "AIzaSyA5S3gggmVm6qHXq095O5T9HlfzGdMfPmY",
+            authDomain: "distribuited-project.firebaseapp.com",
+            databaseURL: "https://distribuited-project.firebaseio.com",
+            projectId: "distribuited-project",
+            storageBucket: "distribuited-project.appspot.com",
+            messagingSenderId: "102057103636",
+            appId: "1:102057103636:web:638282735481936b4e7201",
+            measurementId: "G-R28HR4G1S1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    @!section('script')
+</body>
+</html>

@@ -1,0 +1,74 @@
+@layout('master')
+
+@section('head')
+<link rel="stylesheet" type="text/css" href="home.css">
+<title> Home </title>
+@endsection
+
+@section('body')
+
+
+    <div class="navbar row">
+        <h1 class="nav-title">CLASS</h1>
+        <div class="expanded"></div>
+        <div class="row user-options">
+            <div class="icon-button">
+
+                <span onclick="showDropdown()"> <i class="material-icons add-icon">add</i>  </span>
+                <div id="dropdown" class="drop-down">
+                    <div class="drop-button" onclick="dropDownSelect('join')"> JOIN CLASS </div>
+                    <div class="drop-button" onclick="dropDownSelect('create')"> CREATE CLASS </div>
+                </div>
+            </div>
+            <button onclick=" logout()"> LOGOUT </button>
+        </div>
+
+    </div>
+
+
+    <div id="joinModal" class="modal">
+        <div class="modal-content">
+            <div class="icon-button" onclick="showModal('#joinModal')"> <i class="material-icons">close</i> </div>
+            <h4>Join Class</h4>
+            <label for="codeField" class="form-label"> Code </label>
+            <input id="codeField" class="form-input padding-vertical" placeholder="Code">
+            <button id="joinClassButton" class="button" onclick="joinClass()"> OK </button>
+        </div>
+    </div>
+
+    <div id="createClassModal" class="modal">
+        <div class="modal-content">
+            <div class="icon-button" onclick="showModal('#createClassModal')"> <i class="material-icons">close</i> </div>
+
+            <h4>Create Class</h4>
+            <label for="classNameField" class="form-label"> Name </label>
+            <input id="classNameField" class="form-input padding-vertical" placeholder="Name">
+            <button id="insertActivityButton" class="button" onclick="addActivity()"> OK </button>
+        </div>
+    </div>
+
+    <div id="activityModal" class="modal">
+        <div class="modal-content">
+            <div class="icon-button" onclick="showModal('#activityModal')"> <i class="material-icons">close</i> </div>
+            <h4>Add Activity</h4>
+            <label for="activityName" class="form-label"> Name </label>
+            <input id="activityName" class="form-input padding-vertical" placeholder="Name">
+            <label for="activityDate" class="form-label"> Date </label>
+            <input id="activityDate" class="form-input padding-vertical" placeholder="Date">
+            <button id="createClassButton" class="button" onclick="addActivity()"> OK </button>
+        </div>
+    </div>
+
+
+    <div id="pageContent">
+
+    </div>
+
+
+
+@endsection
+
+
+@section('script')
+    <script src="home.js"></script>
+@endsection

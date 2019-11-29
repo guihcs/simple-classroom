@@ -1,0 +1,35 @@
+@layout('master')
+
+@section('head')
+    <title> Login </title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+@endsection
+
+@section('body')
+
+<div class="container">
+    <h1 class="title">Login</h1>
+    <div class="form-group">
+        <label for="emailField" class="form-label">Email</label>
+        <input id="emailField" class="form-input" type="email" placeholder="Email">
+        <label for="passwordField" class="form-label">Password</label>
+        <input id="passwordField" class="form-input" type="password" placeholder="Password">
+    </div>
+
+    <div class="submit-group">
+        <button class="button" onclick="login()" > LOGIN </button>
+        <button class="button sign" onclick=" window.location.href = 'sign' "> SIGN </button>
+    </div>
+
+</div>
+
+
+
+
+@endsection
+
+
+@section('script')
+    <script src="login.js"></script>
+@endsection
+

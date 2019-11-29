@@ -1,0 +1,151 @@
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.navbar {
+    width: 100%;
+    border-bottom: lightgray 1px solid;
+}
+
+.nav-title {
+    margin: 18px 0 18px 24px;
+    font-size: 26px;
+}
+
+.user-options {
+    align-content: end;
+    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.icon-button {
+    margin-right: 32px;
+    cursor: pointer;
+}
+
+.add-icon {
+    font-size: 28px;
+}
+
+
+
+
+.drop-down {
+    display: none;
+    position: absolute;
+    right: 5rem;
+    z-index: 1;
+    background-color: white;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.drop-button {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.drop-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    padding-top: 140px;
+}
+
+.modal-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 480px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.show {
+    display: block;
+}
+.title-container {
+    display: flex;
+    flex-direction: row;
+}
+.add-activity-button {
+    width: 140px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.content-title{
+    margin-left: 16px;
+    width: 100%;
+}
+.card-content {
+    padding: 8px 32px 8px 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 160px;
+    height: 160px;
+    border: lightgray 1px solid;
+    border-radius: 8px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    margin: 8px;
+}
+
+.list-content {
+    width: 60%;
+    margin: auto;
+}
+
+
+.list-tile {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    border: lightgray 1px solid;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.list-title {
+    width: 100%;
+    margin-right: 16px;
+    display: inline-block;
+
+}
+
+.list-date{
+    margin-right: 16px;
+}

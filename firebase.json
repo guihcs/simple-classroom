@@ -1,0 +1,55 @@
+{
+  "hosting": {
+    "public": "public",
+    "headers": [
+      {
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/",
+        "function": "app"
+      },
+      {
+        "source": "/sign",
+        "function": "app"
+      },
+      {
+        "source": "/home",
+        "function": "app"
+      },
+      {
+        "source": "/database",
+        "function": "app"
+      },
+      {
+        "source": "/database/*",
+        "function": "app"
+      },
+      {
+        "source": "/join",
+        "function": "app"
+      },
+      {
+        "source": "/create",
+        "function": "app"
+      },
+      {
+        "source": "/insertActivity",
+        "function": "app"
+      }
+    ]
+  }
+}
