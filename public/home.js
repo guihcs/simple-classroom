@@ -28,7 +28,7 @@ async function loadActivities(id){
     );
 
 
-    let doc = await $.get('https://distribuited-project.web.app/database/' + id);
+    let doc = await $.get('http://localhost:5000/database/' + id);
 
     let activities = doc.activities;
 
@@ -48,7 +48,7 @@ async function refresh() {
     let user = firebase.auth().currentUser;
 
     try{
-        let doc = await $.get('https://distribuited-project.web.app/database/' + user.uid);
+        let doc = await $.get('http://localhost:5000/database/' + user.uid);
 
         let classes = doc.classes;
 
@@ -116,7 +116,7 @@ async function createClass(){
 
     let uid = firebase.auth().currentUser.uid;
 
-    let result = await $.post('https://distribuited-project.web.app/create', {
+    let result = await $.post('http://localhost:5000/create', {
         id: uid,
         name: className
     });
@@ -134,7 +134,7 @@ async function joinClass(){
 
     let uid = firebase.auth().currentUser.uid;
 
-    let result = await $.post('https://distribuited-project.web.app/join', {
+    let result = await $.post('http://localhost:5000/join', {
         id: uid,
         code: code
     });
@@ -152,7 +152,7 @@ async function addActivity(){
     let user = firebase.auth().currentUser;
 
 
-    let doc = await $.post('https://distribuited-project.web.app/insertActivity', {
+    let doc = await $.post('http://localhost:5000/insertActivity', {
         'class_id': currentClassID,
         activity: {
             'user_name': user.displayName,

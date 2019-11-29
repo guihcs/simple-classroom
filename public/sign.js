@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
             displayName: $('#nameField')[0].value
         });
 
-        let res = await $.post('https://distribuited-project.web.app/sign', {
+        let res = await $.post('http://localhost:5000/sign', {
             id: user.uid
         });
         if(res.ok){
